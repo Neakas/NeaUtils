@@ -30,7 +30,7 @@ namespace NeaUtils.Extensions.ErrorHandling
     }
 
     /// <summary>
-    /// PlaceHolder Exception Object
+    /// PlaceHolder Exception Object for Later Use
     /// </summary>
     public class InvalidValueException : Exception
     {
