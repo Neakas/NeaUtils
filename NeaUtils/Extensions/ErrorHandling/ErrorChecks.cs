@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 
 namespace NeaUtils.Extensions.ErrorHandling
 {
-    internal static class ErrorChecks
+    public static class ErrorChecks
     {
         /// <summary>
         /// Checks the Type T for Condition exp. If true, an InvalidValueExeption is returned or immidiatly thrown
