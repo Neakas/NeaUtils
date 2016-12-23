@@ -26,6 +26,10 @@ namespace NeaUtils.Extensions.Datentypen
                                                                                        ? defaultIfNull
                                                                                        : Convert.ToBoolean(value);
 
+        public static double ToDouble(this double? value, double defaultIfNull = 0) => value == null
+                                                                                       ? defaultIfNull
+                                                                                       : Convert.ToDouble(value);
+
         public static DateTime ToDateTime(this DateTime? value, DateTime defaultIfNull = new DateTime())
             => value ?? defaultIfNull;
     }
