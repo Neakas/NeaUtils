@@ -41,5 +41,16 @@ namespace NeaUtils.Extensions.XmlExtensions
             }
             return result;
         }
+
+        public static T DeserializeFromStream<T>(this T value, Stream stream)
+        {
+            var xmlSerializer = new XmlSerializer(typeof(T));
+            T result;
+            using (stream)
+            {
+                result = (T)xmlSerializer.Deserialize(stream);
+            }
+            return result;
+        }
     }
 }

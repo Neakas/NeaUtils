@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,5 +33,7 @@ namespace NeaUtils.Extensions.Datentypen
 
         public static DateTime ToDateTime(this DateTime? value, DateTime defaultIfNull = new DateTime())
             => value ?? defaultIfNull;
+
+        public static int GetKw(this DateTime dt) => CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(dt, CultureInfo.CurrentCulture.DateTimeFormat.CalendarWeekRule, CultureInfo.CurrentCulture.DateTimeFormat.FirstDayOfWeek);
     }
 }
